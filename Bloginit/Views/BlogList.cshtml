@@ -1,0 +1,162 @@
+﻿@inherits UmbracoViewPage
+    
+@using Bloginit.Helper
+
+
+
+@{
+    Layout = "Master.cshtml";
+
+
+    var bloglist = Model.Root().Descendants<BlogList>().FirstOrDefault();
+    var categorys = bloglist.Descendants<BlogCategory>();
+    var blogs = bloglist.Descendants<BlogPost>().Where(x => x.IsVisible()).OrderByDescending(y => y.BlogDate);
+
+    int blogSize = bloglist.HasValue("blogTotal") ? bloglist.Value<int>("blogTotal") : 4;
+    var blogTotal = blogs != null && blogs.Any() ? blogs.Count() :0;
+    var pageNumber = QueryStringHelper.GetIntFromQueryString(Request,"page",1);
+    var totalPages = Math.Ceiling((double)blogTotal / (double)blogSize);
+
+    var blogList = blogs.Skip((pageNumber - 1) * blogSize).Take(blogSize);
+
+    var pageUrl = Model.Url;
+
+    @*var blogs = root.Children;*@
+}
+
+@* var blogs = Model.Children.Where("Level <= 2"); *@
+
+@* the fun starts here *@
+
+
+
+@Html.Partial("~/Views/Partials/topHeader.cshtml")
+
+
+<section class="section blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul class="list-group" style="margin-top:50px;">
+                    @if (categorys != null && categorys.Any())
+                    {
+                        foreach (var category in categorys)
+                        {
+                            <li class="list-group-item"><a href="@category.Url">@category.Name</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="col">
+                <nav aria-label="Page navigation" style="margin-top:50px;padding:20px;">
+                    <ul class="pagination justify-content-end">
+                        @if (blogList != null && blogList.Any())
+                        {
+                            if (pageNumber > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@($"{pageUrl}?page={pageNumber - 1 }")" tabindex="-1">Previous</a>
+                                </li>
+                            }
+
+                            if ((pageNumber - 1) > 1)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page=1")">First</a></li>
+                            }
+
+                            if ((pageNumber - 1) > 2)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber - 2 }")">@(pageNumber - 2)</a></li>
+                            }
+
+                            if (pageNumber > 1)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber - 1 }")">@(pageNumber - 1)</a></li>
+                            }
+                            <li class="page-item active"><a class="page-link" href="@($"{pageUrl}?page={pageNumber}")">@pageNumber</a></li>
+                            if (totalPages > 1 && pageNumber < totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber + 1}")">@(pageNumber + 1)</a></li>
+                            }
+                            if ((pageNumber + 2) < totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber + 2 }")">@(pageNumber + 2)</a></li>
+                            }
+                            if ((pageNumber + 2) <= totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={totalPages}")">last</a></li>
+                            }
+
+                            if (totalPages > 1 && pageNumber < totalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@($"{pageUrl}?page={pageNumber + 1 }")">Next</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </nav>
+                
+                <div class="contentContainer">
+                    @if (blogList != null && blogList.Any())
+                    {
+                        foreach (var blog in blogList)
+                        {
+                            var thumbnail = blog.HasProperty("thumbnail") && blog.HasValue("thumbnail") ? blog.Thumbnail.Url : "/media/5ztbaxnb/image-2.jpg";
+                            <a href="@blog.Url" class="article_card col-5">
+                                <img src="@thumbnail" alt="@blog.PageTitle Thumbnail" />
+                                <h4>@blog.PageTitle</h4>
+                                <p>@blog.ShortDescription</p>
+                            </a>
+                        }
+                    }
+                </div>
+                <nav aria-label="Page navigation" style="margin-top:50px;padding:20px;">
+                    <ul class="pagination justify-content-end">
+                        @if (blogList != null && blogList.Any()) { if (pageNumber > 1) { <li class="page-item">
+                                    <a class="page-link" href="@($"{pageUrl}?page={pageNumber - 1 }")" tabindex="-1">Previous</a>
+                                </li>
+                            }
+
+                            if ((pageNumber - 1) > 1)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page=1")">First</a></li>
+                            }
+
+                            if ((pageNumber - 1) > 2)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber - 2 }")">@(pageNumber - 2)</a></li>
+                            }
+
+                            if (pageNumber > 1)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber - 1 }")">@(pageNumber - 1)</a></li>
+                            }
+                            <li class="page-item active"><a class="page-link" href="@($"{pageUrl}?page={pageNumber}")">@pageNumber</a></li>
+                            if (totalPages > 1 && pageNumber < totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber + 1}")">@(pageNumber + 1)</a></li>
+                            }
+                            if ((pageNumber + 2) < totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={pageNumber + 2 }")">@(pageNumber + 2)</a></li>
+                            }
+                            if ((pageNumber + 2) <= totalPages)
+                            {
+                                <li class="page-item"><a class="page-link" href="@($"{pageUrl}?page={totalPages}")">last</a></li>
+                            }
+
+                            if (totalPages > 1 && pageNumber < totalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@($"{pageUrl}?page={pageNumber + 1 }")">Next</a>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>

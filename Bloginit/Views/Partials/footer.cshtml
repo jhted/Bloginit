@@ -1,0 +1,24 @@
+﻿@*
+
+    @inherits Umbraco.Web.Mvc.UmbracoViewPage
+    @inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Core.Models.Blocks.BlockListItem>
+@using Umbraco.Core.Models.Blocks;
+    var footerBlocks = homePage.Value<IEnumerable<BlockListItem>>("footerblocks");
+@using Umbraco.Web.Models
+@using Umbraco.Core.Models.Blocks;
+*@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+@{
+    var homePage = Model.AncestorOrSelf<Home>();
+
+}
+<footer class="footer">
+    <div class="container">
+        <div class="block flex-me">
+            @Html.GetBlockListHtml(homePage.Footerblocks)
+        </div>
+    </div>
+</footer>
+<div id="bottomfooter"></div>

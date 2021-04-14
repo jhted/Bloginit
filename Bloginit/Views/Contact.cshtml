@@ -1,0 +1,80 @@
+﻿
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ClientDependency.Core.Mvc
+@{
+    // @using Models
+
+    Layout = "Master.cshtml";
+    var contactForm = Model.Value("contactForm");
+    // var formId = Model.HasProperty("contactForm") && Model.HasValue("contactForm") ? Model.HasValue("contactForm").Guid : "eb28034c-c3e1-43f3-9e49-67f62fe5ab18";
+    // var formId = contactForm.Name;
+}
+
+@Html.Partial("~/Views/Partials/topHeader.cshtml")
+
+@if (Model.HasValue("gridContent"))
+{
+    @Html.GetGridHtml(Model, "gridContent")
+}
+<section class="section comtact">
+    <div class="container">
+            @if (contactForm != null)
+            {
+
+                @Umbraco.RenderMacro("renderUmbracoForm", new { FormGuid = contactForm, FormTheme = "bloginit", ExcludeScripts = "1" })
+            }
+            <hr />
+    </div>
+</section>
+@*
+            @using Macros.PartialViewMacroPage
+    @inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+
+
+
+
+
+        @{
+            Html.EnableClientValidation();
+            Html.EnableUnobtrusiveJavaScript();
+
+            Html.RequiresJs("~/js/contactForm.js");
+            Html.RequiresJs("~/vandor/jquiry/jquiry.min.js");
+
+
+
+        }
+
+*@
+@*
+
+*@
+@*
+                @{ Html.RenderAction("RenderForm", "ContactForm"); }
+                @{
+                    Html.RenderPartial("~/Views/Partials/ContactForm.cshtml", new ContactFormViewModel());
+                }
+                @Umbraco.RenderMacro("umbracoformsRenderForm", new { FormGuid = Umbraco.Field("consultantForm") })
+
+                    480075d7-3f9d-4190-9356-11978ddbb8cf
+
+    @if (TempData["UmbracoForms"] != null)
+    {
+        foreach (var form in (List<Guid>)TempData["UmbracoForms"])
+        {
+            Html.RenderAction("RenderFormScripts", "UmbracoForms", new { formid = form, theme = "bootstrap3-horizontal" });
+        }
+    }
+*@
+@*
+
+
+    @if (Model.MacroParameters["FormGuid"] != null)
+    {
+        var s = Model.MacroParameters["FormGuid"].ToString();
+        var g = new Guid(s);
+
+        Html.RenderAction("Render", "UmbracoForms", new { formId = g });
+    }
+*@

@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Person>
+
+
+
+@{
+    Layout = "Master.cshtml";
+
+    var personImage = Model.HasProperty("headerImage") && Model.HasValue("headerImage") ? Model.Value<IPublishedContent>("headerImage").Url : "";
+    var personName = Model.HasProperty("personNames") && Model.HasValue("personNames") ? Model.Value("personNames") : "";
+    var pageTitle = Model.HasProperty("pageTitle") && Model.HasValue("pageTitle") ? Model.Value("pageTitle") : "";
+    var profileImage = Model.HasProperty("thumbnail") && Model.HasValue("thumbnail") ? Model.Value<IPublishedContent>("thumbnail").Url : "/img/author.jpg";
+}
+
+@* the fun starts here *@
+
+<section class="section hero" style="background-image: url('@personImage')">
+    <div class="heroContent">
+        <div class="container">
+            <div class="heroContent_left centerContent">
+                <div class="person-info center-me">
+                    <h5>@Model.PersonNames</h5>
+                    <p>@Model.PersonTitle</p>
+                    <p>@Model.PersonEmail</p>
+                    <p>@Model.PersonDetails</p>
+                </div>
+            </div>
+            <div class="heroContent_right centerContent">
+                <img src="@profileImage" alt="picture" style="max-width: 100%; width: 300px; border-radius: 50%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@if (Model.HasValue("gridContent"))
+{
+    @Html.GetGridHtml(Model, "gridContent")
+}
+
+<section class="section blogpage">
+    <div class="container">
+        <div class="blogTitle">
+            <div class="authorBox">
+                <div class="authorBox_follow">
+                    <div><button class="btn btn-primary" onclick="goback()">Go Back</button></div>
+                </div>
+                <div class="authorBox_info">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

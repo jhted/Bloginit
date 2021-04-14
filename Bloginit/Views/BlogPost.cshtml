@@ -1,0 +1,65 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+@{
+    
+    Layout = "Master.cshtml";
+
+    
+    var blogImage = Model.HasProperty("headerImage") && Model.HasValue("headerImage") ? Model.Value<IPublishedContent>("headerImage").Url : "";
+    var authorImage = Model.HasProperty("authorImage") && Model.HasValue("authorImage") ? Model.Value<IPublishedContent>("authorImage").Url : "/img/author.jpg";
+    var blogAuthor = Model.HasProperty("blogAuthor") && Model.HasValue("blogAuthor") ? Model.Value("blogAuthor") : "";
+    var pageTitle = Model.HasProperty("pageTitle") && Model.HasValue("pageTitle") ? Model.Value("pageTitle") : "";
+    DateTime blogDate = Model.HasProperty("blogDate") && Model.HasValue("blogDate") ? Model.Value<DateTime>("blogDate") : DateTime.MinValue;
+
+
+}
+
+
+<section class="section blogpage">
+    <div class="container">
+        <div class="blogTitle">
+            <h1>@pageTitle</h1>
+            <div class="authorBox">
+                <img src="@authorImage" alt="@blogAuthor" />
+                <div class="authorBox_info">
+                    <h1>@blogAuthor</h1>
+                    <p>@blogDate.ToString("MMMM dd, yyyy")</p>
+                </div>
+                <div class="authorBox_follow">
+                    <div>Follow Us</div>
+                    <div><i class="fa fa-facebook"></i></div>
+                    <div><i class="fa fa-twitter"></i></div>
+                    <div><i class="fa fa-linkedin"></i></div>
+                </div>
+            </div>
+        </div>
+        @if (Model.HasProperty("headerImage") && Model.HasValue("headerImage"))
+        {
+            <img src="@blogImage" alt="@blogAuthor" class="blogImage" />
+        }
+    </div>
+</section>
+
+<div class="blogDataContainer">
+
+    @if (Model.HasValue("gridContent"))
+    {
+        @Html.GetGridHtml(Model, "gridContent")
+    }
+</div>
+
+
+<section class="section blogpage">
+    <div class="container">
+        <div class="blogTitle">
+            <div class="authorBox">
+                <div class="authorBox_follow">
+                    <div><button class="btn btn-primary" onclick="goback()">Go Back</button></div>
+                </div>
+                <div class="authorBox_info">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

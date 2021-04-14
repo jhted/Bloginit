@@ -1,0 +1,20 @@
+{
+  "id": "6fec457c-268b-478b-a4aa-270e559831d3",
+  "name": "Send template email to info2@jhnet.co.za",
+  "form": "885afbfb-7894-4fb0-9391-6ed5ea0c6a9b",
+  "active": true,
+  "includeSensitiveData": "False",
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": "",
+    "Email": "",
+    "CcEmail": "",
+    "BccEmail": "",
+    "SenderEmail": "",
+    "ReplyToEmail": "",
+    "Subject": "The Form '{form_name}' was submitted"
+  },
+  "sortOrder": 1
+}

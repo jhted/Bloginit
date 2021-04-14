@@ -1,0 +1,53 @@
+﻿@*
+
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactFormViewModel>
+*@
+
+@model MyFirstForm.Models.ContactFormViewModel
+
+
+<div class="contact_form" id="contact_form_container">
+
+    @*
+
+        @using (Html.BeginUmbracoForm("Submit", "ContactForm"))
+    *@
+
+    @using (Ajax.BeginForm("Submit", "ContactSurface", new AjaxOptions()
+    {
+        UpdateTargetId = "contact_form_results",
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        OnSuccess = "contactForm.showResult",
+        OnFailure = "contactForm.showResult"
+    }, new { id = "contact-form" }))
+    {
+        @Html.HiddenFor(m => m.ContactFormId)
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Names</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Jhon Do" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "name@example.com" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Subject</label>
+            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Support" })
+            @Html.ValidationMessageFor(m => m.Subject)
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Please write your Message here", rows = "6" })
+            @Html.ValidationMessageFor(m => m.Message)
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary contact-submit" type="submit">Send Message</button>
+        </div>
+    }
+    <hr />
+</div>
+<div class="contact_form_results">
+</div>

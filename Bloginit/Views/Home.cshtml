@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+    @Html.Partial("~/Views/Partials/topHeader.cshtml")
+    <section class="section">
+        <div class="container block flex-rev">
+            <div class="block_text">
+                <h1>@Model.PageTitle</h1>
+            </div>
+        </div>
+    </section>
+    @if (Model.HasValue("gridContent"))
+    {
+        @Html.GetGridHtml(Model,"gridContent")
+    }

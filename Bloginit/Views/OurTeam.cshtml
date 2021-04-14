@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = "Master.cshtml";
+
+
+    var ourTeamPage = Model.Root().Descendants<OurTeam>().FirstOrDefault();
+    var ourTeam = ourTeamPage.Descendants<Person>().Where(x => x.IsVisible()).OrderByDescending(y => y.PersonNames);
+}
+
+@* the fun starts here *@
+
+@Html.Partial("~/Views/Partials/topHeader.cshtml")
+
+<section class="section">
+    <div class="container" style="padding:100px 10px 50px 10px">
+        <div class="row">
+            @if (ourTeam != null && ourTeam.Any())
+            {
+                foreach (var Person in ourTeam)
+                {
+                    var thumbnail = Person.HasProperty("thumbnail") && Person.HasValue("thumbnail") ? Person.Thumbnail.Url : "/media/5ztbaxnb/image-2.jpg";
+                    <a href="@Person.Url" class=" col-4">
+                        <div class="card">
+                            <img src="@thumbnail" alt="@Person.PageTitle Thumbnail" class="card-img-top" />
+                            <div class="card-body">
+                                <h4 class="card-title">@Person.PersonNames</h4>
+                                <p class="card-text">@Person.ShortDescription</p>
+                            </div>
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+</section>

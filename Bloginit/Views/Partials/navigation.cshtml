@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage
+
+
+
+@{
+    var homePage = Model.AncestorOrSelf<Home>();
+
+}
+<header class="header">
+    <div class="topNave">
+        <div class="container">
+            <a href="/" class="topNavLogo centerContent">@homePage.Name</a>
+            <div class="topNavItems">
+                @if (homePage.TopMenuLinks != null)
+                {
+                    foreach (var item in homePage.TopMenuLinks)
+                    {
+
+                        <a href="@item.LinkUrl.Url" class="topNavItem centerContent">
+                            @item.LinkHeading
+                        </a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</header>

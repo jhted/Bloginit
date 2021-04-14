@@ -1,0 +1,34 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    var content = (ContentModels.FooterButtonItem)Model.Content;
+    var settings = (ContentModels.FooterButtonItem)Model.Settings;
+}
+
+
+
+<li><a href="@content.ItemLink.Url">@content.LinkHeading</a></li>
+@*
+    <div class="footer_block footerBlock_Main">
+        <h1>@footerBlock.Content.Value("blockHeading")</h1>
+        @if (footerBlock.Content.HasProperty("footerBlockText") && footerBlock.Content.HasValue("footerBlockText"))
+        {
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iure quod fugiat ea nisi tenetur asperiores obcaecati eum. Mollitia, debitis?</p>
+        }
+        else if (footerBlock.Content.HasProperty("linkBlock") && footerBlock.Content.HasValue("linkBlock"))
+        {
+            var linkBlocks = footerBlock.Content.Value("linkBlock");
+            <ul>
+                <li><a href="#bottomfooter">About</a></li>
+                @if (linkBlocks.Count() > 0)
+                {
+                    foreach (var linkBlock in linkBlocks)
+                    {
+                        <li><a href="#bottomfooter">See out Team</a></li>
+                        <li><a href="#bottomfooter">Contact</a></li>
+                    }
+                }
+            </ul>
+        }
+    </div>
+*@

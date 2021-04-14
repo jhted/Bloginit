@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+	
+@* @using CleanBlog.Core.Extensions *@
+
+@{
+	Layout = "Master.cshtml";
+}
+
+@Html.Partial("~/Views/Partials/topHeader.cshtml")
+    @if (Model.HasValue("gridContent"))
+    {
+        @Html.GetGridHtml(Model,"gridContent")
+    }

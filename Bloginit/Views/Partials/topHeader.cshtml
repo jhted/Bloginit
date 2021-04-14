@@ -1,0 +1,41 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    var title = Model.Value("pageTitle");
+    var description = Model.Value("shortDescription");
+    @*
+    int imageId = Umbraco.AssignedContentItem.GetPropertyValue<int>("headerImage");
+    string imageUrl = imageId > 0 ? Umbraco.Media(imageId).Url : string.Empty;
+    var image = Model.Value<IPublishedContent>("headerImage");
+        *@
+var imageUrl = Model.Value<IPublishedContent>("headerImage", fallback: Fallback.ToAncestors).Url();
+}
+@*
+
+    <section className="section hero bgWhite" style="@(!string.IsNullOrWhiteSpace(imageUrl) ? "background-image: url('" + imageUrl +"')" : null)">
+        <div className="heroContent">
+            <div className="container">
+                <div className="heroContent_left centerContent">
+                    <h1>{Model.title}</h1>
+                </div>
+                <div className="heroContent_right centerContent">
+                    <p>{Model.subtitle}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+*@
+<header class="header hero" style="background-image: url('@imageUrl')">
+    <div class="heroContent">
+        <div class="container">
+            <div class="heroContent_left centerContent">
+                <h1>@title</h1>
+            </div>
+            <div class="heroContent_right centerContent">
+                <p>
+                    @description
+                </p>
+            </div>
+        </div>
+    </div>
+</header>

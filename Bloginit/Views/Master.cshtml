@@ -1,0 +1,57 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@using ClientDependency.Core.Mvc
+@* @using ClientDependency.Core *@
+
+@{
+    Layout = null;
+
+    Html.RequiresCss("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+    Html.RequiresCss("/css/all.min.css");
+    Html.RequiresCss("/css/main.css");
+    Html.RequiresCss("/css/bootstrap.min.css");
+
+
+    Html.RequiresJs("/js/main.js");
+
+
+    var seoTitle = Model.HasValue("seoTitle") ? " | " + Model.Value<string>("seoTitle") : "";
+
+}
+
+@* the fun starts here *@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogInit @(!string.IsNullOrEmpty(seoTitle) ? seoTitle : "")</title>
+
+    @if (Model.HasValue("seoMetaDescription"))
+    {
+        var seoMetaDescription = Model.Value<string>("seoMetaDescription");
+        <meta name="description" content="@seoMetaDescription">
+    }
+
+    @if (Model.Value("Keywords") is IEnumerable<string>)
+    {
+        var Keywords = String.Join(", ", Model.Value<IEnumerable<string>>("Keywords"));
+        <meta name="Keywords" content="@Keywords">
+    }
+
+
+    @Html.RenderCssHere()
+</head>
+<body>
+
+    @Html.Partial("~/Views/Partials/navigation.cshtml")
+
+    @RenderBody()
+
+    @Html.Partial("~/Views/Partials/footer.cshtml")
+    @Html.RenderJsHere()
+</body>
+</html>
