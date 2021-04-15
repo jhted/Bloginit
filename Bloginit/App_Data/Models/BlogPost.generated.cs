@@ -45,18 +45,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Author Image
+		/// Author
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
-		[ImplementPropertyType("authorImage")]
-		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent AuthorImage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("authorImage");
+		[ImplementPropertyType("author")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Author => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("author");
 
 		///<summary>
-		/// Blog Author
+		/// Author 2
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
-		[ImplementPropertyType("blogAuthor")]
-		public string BlogAuthor => this.Value<string>("blogAuthor");
+		[ImplementPropertyType("author2")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Author2 => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("author2");
 
 		///<summary>
 		/// Blog Date
@@ -64,6 +64,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
 		[ImplementPropertyType("blogDate")]
 		public global::System.DateTime BlogDate => this.Value<global::System.DateTime>("blogDate");
+
+		///<summary>
+		/// User Picker
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
+		[ImplementPropertyType("userPicker")]
+		public object UserPicker => this.Value("userPicker");
 
 		///<summary>
 		/// Add Return To Parent Button

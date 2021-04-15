@@ -87,12 +87,30 @@ Umbraco.Core.Migrations.Upgrade.V_8_0_0.VariantsMigration, Umbraco.Core, Version
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.ContentVariationMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Services.Implement.KeyValueService+InitializeMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Installer.ClientDependencyStartupComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FieldController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormPickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormSecurityController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PreValueFileController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.ThemePickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Dashboards.FormsDashboard, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Components.WebComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Migrations.V_8_7_0.AddFormKeysAndIndexes, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Migrations.V_8_7_0.AddRecordKeysAndIndexes, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Migrations.V_8_5_0.AddFormsDbStorage, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
@@ -111,7 +129,6 @@ Umbraco.Forms.Core.Cache.PreValueCacheRefresher, Umbraco.Forms.Core, Version=8.7
 Umbraco.Forms.Core.Cache.PreValueDbCacheRefresher, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Cache.WorkflowCacheRefresher, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Cache.WorkflowDbCacheRefresher, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -316,30 +333,13 @@ Umbraco.Web.Cache.MemberGroupCacheRefresher, Umbraco.Web, Version=8.0.0.0, Cultu
 Umbraco.Web.Cache.PublicAccessCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.TemplateCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Installer.ClientDependencyStartupComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FieldController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormPickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormSecurityController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PreValueFileController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.ThemePickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Dashboards.FormsDashboard, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Components.WebComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Composing.IComposer
 
@@ -350,7 +350,8 @@ Umbraco.Core.Compose.RelateOnCopyComposer, Umbraco.Core, Version=8.0.0.0, Cultur
 Umbraco.Core.Compose.RelateOnTrashComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Runtime.CoreInitialComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Installer.ClientDependencyStartupComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Components.WebComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Components.FormsNotRunningComponent, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Forms.Core.Components.UmbracoFormsComposer, Umbraco.Forms.Core, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.SignalR.PreviewHubComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -371,8 +372,7 @@ Umbraco.Web.Compose.PublicAccessComposer, Umbraco.Web, Version=8.0.0.0, Culture=
 Umbraco.Web.Compose.NestedContentPropertyComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Compose.DatabaseServerRegistrarAndMessengerComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.DistributedCacheBinderComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Installer.ClientDependencyStartupComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Components.WebComposer, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.PropertyEditors.IPropertyValueConverter
 
@@ -412,12 +412,12 @@ Umbraco.Web.PropertyEditors.ValueConverters.RteMacroRenderingValueConverter, Umb
 
 Umbraco.Web.Mvc.PluginController
 
-MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.IRenderMvcController
 
@@ -425,7 +425,26 @@ Umbraco.Web.Mvc.RenderMvcController, Umbraco.Web, Version=8.0.0.0, Culture=neutr
 
 Umbraco.Web.WebApi.UmbracoApiController
 
-Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FieldController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormPickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.FormSecurityController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PreValueFileController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.ThemePickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.LogViewerTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.FilesTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.ContentBlueprintTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -498,40 +517,21 @@ Umbraco.Web.Editors.ContentTypeController, Umbraco.Web, Version=8.0.0.0, Culture
 Umbraco.Web.Editors.MediaTypeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.SectionController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.MediaController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.DataSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.EmailTemplateTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.FormSecurityTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.PreValueSourceTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.DataSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.DataSourceWizardController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.ExportController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FieldController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormPickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.FormSecurityController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.LicensingController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PreValueFileController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.PreValueSourceController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.RecordController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.ThemePickerController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.UpdatesController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Editors.WorkflowController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.SurfaceController
 
-MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Controllers.UmbracoFormsController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+MyFirstForm.Controllers.ContactFormController, Bloginit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Dashboards.IDashboard
 
 Umbraco.Core.Manifest.ManifestDashboard, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Forms.Web.Dashboards.FormsDashboard, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.ContentDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.ExamineDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.FormsDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -542,7 +542,7 @@ Umbraco.Web.Dashboards.ProfilerDashboardDashboard, Umbraco.Web, Version=8.0.0.0,
 Umbraco.Web.Dashboards.PublishedStatusDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.RedirectUrlDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Dashboards.SettingsDashboard, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Dashboards.FormsDashboard, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.PropertyEditors.IDataEditor
 
@@ -620,6 +620,7 @@ Umbraco.Core.PackageActions.PublishRootDocument, Umbraco.Core, Version=8.0.0.0, 
 
 Umbraco.Web.Trees.ISearchableTree
 
+Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.ContentTypeTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.MediaTypeTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.MemberTypeTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -628,7 +629,6 @@ Umbraco.Web.Trees.MemberTreeController, Umbraco.Web, Version=8.0.0.0, Culture=ne
 Umbraco.Web.Trees.TemplatesTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.MediaTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.ContentTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.Forms.Web.Trees.FormTreeController, Umbraco.Forms.Web, Version=8.7.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Editors.IEditorValidator
 
