@@ -2,29 +2,39 @@
 
 
 @{
-    
+
     Layout = "Master.cshtml";
 
-    
+
     var blogImage = Model.HasProperty("headerImage") && Model.HasValue("headerImage") ? Model.Value<IPublishedContent>("headerImage").Url : "";
-    var authorImage = Model.HasProperty("authorImage") && Model.HasValue("authorImage") ? Model.Value<IPublishedContent>("authorImage").Url : "/img/author.jpg";
     var blogAuthor = Model.HasProperty("blogAuthor") && Model.HasValue("blogAuthor") ? Model.Value("blogAuthor") : "";
     var pageTitle = Model.HasProperty("pageTitle") && Model.HasValue("pageTitle") ? Model.Value("pageTitle") : "";
     DateTime blogDate = Model.HasProperty("blogDate") && Model.HasValue("blogDate") ? Model.Value<DateTime>("blogDate") : DateTime.MinValue;
 
+    var author = Model.HasProperty("author") && Model.HasValue("author") ? Model.Value<Author>("author") : null;
+    var authorImage = "/img/author.jpg";
+    var authorName = "";
+    var authorTitle = "";
+
+    if (Model.HasProperty("author") && Model.HasValue("author"))
+    {
+        authorName = author.AuthorName;
+        authorTitle = author.AuthorTitle;
+        authorImage = author.HasValue("profilePicture") ? author.ProfilePicture.Url  : authorImage;
+
+    }
 
 }
-
 
 <section class="section blogpage">
     <div class="container">
         <div class="blogTitle">
             <h1>@pageTitle</h1>
             <div class="authorBox">
-                <img src="@authorImage" alt="@blogAuthor" />
+                <img src="@authorImage" alt="@authorName" />
                 <div class="authorBox_info">
-                    <h1>@blogAuthor</h1>
-                    <p>@blogDate.ToString("MMMM dd, yyyy")</p>
+                    <h1>@authorName</h1>
+                    <p>@authorTitle</p>
                 </div>
                 <div class="authorBox_follow">
                     <div>Follow Us</div>
@@ -50,6 +60,13 @@
 </div>
 
 
+<section class="section blogpage">
+    <div class="container">
+        <div class="blogTitle" style="padding-top:0px;">
+            <p>Posted on : @blogDate.ToString("dd MMMM yyyy")</p>
+        </div>
+    </div>
+</section>
 <section class="section blogpage">
     <div class="container">
         <div class="blogTitle">

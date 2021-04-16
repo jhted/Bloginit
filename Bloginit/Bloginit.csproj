@@ -358,7 +358,7 @@
     <Content Include="Views\BlogCategory.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\footerText.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\footerBlock.cshtml" />
-    <Content Include="Views\Partials\BlockList\Components\footerButtonItem.cshtml" />
+    <Content Include="Views\Partials\BlockList\Components\footerLinkItem.cshtml" />
     <Content Include="Views\Partials\Contact\results.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\mainNavigationBlock.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\mainNavigationLinkItem.cshtml" />

@@ -52,25 +52,11 @@ namespace Umbraco.Web.PublishedModels
 		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Author => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("author");
 
 		///<summary>
-		/// Author 2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
-		[ImplementPropertyType("author2")]
-		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent Author2 => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("author2");
-
-		///<summary>
 		/// Blog Date
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
 		[ImplementPropertyType("blogDate")]
 		public global::System.DateTime BlogDate => this.Value<global::System.DateTime>("blogDate");
-
-		///<summary>
-		/// User Picker
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.12.2")]
-		[ImplementPropertyType("userPicker")]
-		public object UserPicker => this.Value("userPicker");
 
 		///<summary>
 		/// Add Return To Parent Button
